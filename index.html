@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gregory Le Sage Books</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; }
+    header { background: #222; color: #fff; padding: 1rem; }
+    nav { display: flex; gap: 1rem; }
+    nav a { color: #fff; text-decoration: none; padding: 0.5rem 0.8rem; border-radius: 6px; }
+    nav a:hover { background: #444; }
+    main { padding: 2rem; max-width: 900px; margin: auto; }
+    h1, h2 { color: #222; }
+    .grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); }
+    .book { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; }
+    .book img { max-width: 100%; border-radius: 6px; }
+    .btn { background: #222; color: #fff; padding: 0.6rem 1rem; text-decoration: none; border-radius: 6px; display: inline-block; margin: 0.2rem 0; }
+    .btn:hover { opacity: 0.85; }
+    footer { background: #f5f5f5; text-align: center; padding: 1rem; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gregory Le Sage Books</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#books">Books</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <h2>Welcome</h2>
+    <p>Explore the science-based fiction of Gregory Peter Le Sage, featuring cutting-edge ideas, danger, and unforgettable stories.</p>
+
+    <section id="books">
+      <h2>Books</h2>
+      <div class="grid">
+        <div class="book">
+          <img src="Quantum Eschaton_Cover.jpg" alt="Quantum Eschaton cover">
+          <h3>Quantum Eschaton</h3>
+          <p>A dark techno-thriller about quantum computing, espionage, and a conspiracy that threatens the world order.</p>
+          <a class="btn" href="https://www.amazon.com/Quantum-Eschaton-Gregory-Sage-ebook/dp/B0DJWHP2LX/" target="_blank" rel="noopener noreferrer">Buy eBook or Paperback</a>
+          <a class="btn" href="https://play.google.com/store/audiobooks/details/Quantum_Eschaton?id=AQAAAEDygA7A7M&amp;hl=en_US" target="_blank" rel="noopener noreferrer">Buy Audio Book</a>
+          <a class="btn" href="QE Reviews.html" target="_blank" rel="noopener noreferrer">Read Reviews</a>
+        </div>
+
+        <div class="book">
+          <img src="Cassandra Omen_Cover.jpg" alt="Cassandra Omen cover">
+          <h3>Cassandra Omen</h3>
+          <p>A chilling story of alien invasion, hidden truths, and one man’s desperate attempt to warn humanity before it’s too late.</p>
+          <a class="btn" href="https://www.amazon.com/Cassandra-Omen-Gregory-Sage/dp/B0FNC4C3SH/" target="_blank" rel="noopener noreferrer">Buy eBook or Paperback</a>
+          <a class="btn" href="CO Reviews.html" target="_blank" rel="noopener noreferrer">Read Reviews</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About the Author</h2>
+      <p>Gregory Peter Le Sage is a scientist and engineer at SLAC National Accelerator Laboratory. His fiction blends deep technical knowledge with thrilling, dangerous plots about the future of technology and humanity.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>For inquiries, reach out via email or connect on author pages.</p>
+      <a class="btn" href="mailto:lesagegp@gmail.com">Email Me</a>
+      <a class="btn" href="https://www.amazon.com/stores/author/B0DJYJL2F1" target="_blank" rel="noopener noreferrer">Amazon Author Page</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gregory Peter Le Sage</p>
+  </footer>
+</body>
+</html>
