@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reviews – Quantum Eschaton</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{font-family:Arial,system-ui,Segoe UI,Helvetica,sans-serif;margin:0;line-height:1.6;color:#222}
+    header{background:#222;color:#fff;padding:1rem}
+    nav{display:flex;gap:1rem;margin-top:.5rem}
+    nav a{color:#fff;text-decoration:none;padding:.5rem .8rem;border-radius:6px}
+    nav a:hover{background:#444}
+    main{padding:2rem;max-width:900px;margin:auto}
+    h1,h2{margin-top:0}
+    .controls{display:flex;gap:.5rem;align-items:center;margin:1rem 0}
+    .btn{background:#222;color:#fff;padding:.6rem 1rem;border-radius:6px;cursor:pointer;user-select:none}
+    .btn:hover{opacity:.9}
+    .counter{margin-left:auto;color:#555}
+    .card{border:1px solid #ddd;border-radius:8px;padding:1rem;background:#fff}
+    .title{font-weight:700;margin:.25rem 0}
+    .excerpt{white-space:pre-wrap;margin:.5rem 0 0}
+    .meta{color:#555;font-size:.95rem;margin-top:.75rem}
+    .source{margin-top:.75rem}
+    .source a{color:#0066cc;text-decoration:none}
+    .source a:hover{text-decoration:underline}
+    footer{background:#f5f5f5;text-align:center;padding:1rem;margin-top:2rem}
+    .review[hidden]{display:none}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quantum Eschaton — Reviews</h1>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./books.html">Books</a>
+      <a href="./about.html">About</a>
+      <a href="./index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Top reviews from the United States</h2>
+
+    <div class="controls">
+      <span class="btn" id="prevBtn" aria-label="Previous review">◀ Prev</span>
+      <span class="btn" id="nextBtn" aria-label="Next review">Next ▶</span>
+      <span class="counter" id="counter">1 / 6</span>
+    </div>
+
+    <article class="card review">
+      <div class="title">5.0 out of 5 stars A good first book!</div>
+      <div class="meta">— Bryan Purtell · Reviewed in the United States on May 19, 2025 · Verified Purchase</div>
+      <div class="excerpt">This is the author's first book and he touched on important topics around quantum computing, specifically about ethics. As the technology continues to develop we need to also ensure that we do not lose sight of our humanity and how we will interact with quantum computers.
+
+I hope the author continues to hone his craft and writes additional stories.</div>
+      <div class="source"><a href="https://www.amazon.com/gp/customer-reviews/R3PZDFXDERC5AQ/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8" target="_blank" rel="noopener noreferrer">View this review on Amazon</a></div>
+    </article>
+
+    <article class="card review" hidden>
+      <div class="title">5.0 out of 5 stars Masterful Suspense Filled Thriller</div>
+      <div class="meta">— An Amazon Prime Customer · Reviewed in the United States on November 28, 2024 · Verified Purchase</div>
+      <div class="excerpt">Gregory Le Sage has crafted a masterful suspense-filled thriller drawing from the worlds of quantum computing and espionage, and if left unchecked, will lead to a Cyber-Armageddon. Tensions rise to a crescendo among his fascinating characters as the forces of good and evil compete to avert a global catastrophe. Corporate greed, flawed individuals, Russian, Chinese, and Korean spymasters, all vying for economic and world dominance, lead to the surprising conclusion that will linger in your mind long after finishing his novel. Le Sage has brilliantly created a riveting story, that is even more frightening and thought provoking, as one realizes that this story could indeed become reality.</div>
+      <div class="source"><a href="https://www.amazon.com/gp/customer-reviews/R2VNIO420P5H8Z/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8" target="_blank" rel="noopener noreferrer">View this review on Amazon</a></div>
+    </article>
+
+    <article class="card review" hidden>
+      <div class="title">5.0 out of 5 stars Fiction or Prediction?!?</div>
+      <div class="meta">— Jamie Arreola · Reviewed in the United States on September 16, 2025</div>
+      <div class="excerpt">Quantum echelon scared the crap out of me! Our financial security will hang in the balance of supercomputers in the hands of devious hackers. It’s a matter of time. This book serves as a warning and hopefully will encourage people to get ahead of the de-encryption issues that are right around the corner. Yikes. I hope the right people read this book and start solving the problem! This is a short but important read. Even though it’s fiction I think it’s more like a prediction.</div>
+      <div class="source"><a href="https://www.amazon.com/gp/customer-reviews/R36DIY3HTATJ90/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8" target="_blank" rel="noopener noreferrer">View this review on Amazon</a></div>
+    </article>
+
+    <article class="card review" hidden>
+      <div class="title">5.0 out of 5 stars Intriguing Fusion of Science Fiction and Philosophy</div>
+      <div class="meta">— Ekta agarwal · Reviewed in the United States on October 15, 2024</div>
+      <div class="excerpt">Quantum Eschaton is a mind-bending dive into the intersection of science fiction, philosophy, and the mysteries of existence. The author skillfully weaves quantum theory with eschatological themes, creating a thought-provoking narrative that challenges the boundaries of time, reality, and human understanding. The writing is dense at times, requiring focus, but the payoff is worth it for readers who enjoy complex, layered stories. If you're a fan of speculative fiction that blends science and metaphysics, this book offers a unique and captivating journey. Highly recommended for deep thinkers and sci-fi enthusiasts alike!</div>
+      <div class="source"><a href="https://www.amazon.com/gp/customer-reviews/R2QDP12SFXFYKL/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8" target="_blank" rel="noopener noreferrer">View this review on Amazon</a></div>
+    </article>
+
+    <article class="card review" hidden>
+      <div class="title">5.0 out of 5 stars A Gripping Tech Thriller</div>
+      <div class="meta">— Slash019 · Reviewed in the United States on October 14, 2024</div>
+      <div class="excerpt">This book masterfully blends quantum computing with corporate intrigue. James, a brilliant scientist, is on the verge of a breakthrough but is persuaded by a mysterious program manager to steal his own discovery. The plot moves quickly, balancing tech concepts with ethical dilemmas. The characters, especially James, are well-developed, and the suspense keeps readers hooked. A sharp, thought-provoking read for fans of tech thrillers.</div>
+      <div class="source"><a href="https://www.amazon.com/gp/customer-reviews/R1BL23F6EMHMA2/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8" target="_blank" rel="noopener noreferrer">View this review on Amazon</a></div>
+    </article>
+
+    <article class="card review" hidden>
+      <div class="title">5.0 out of 5 stars Gripping Techno-Thriller with High-Stakes Quantum Computing</div>
+      <div class="meta">— willglue · Reviewed in the United States on October 16, 2024</div>
+      <div class="excerpt">Quantum Eschaton is a cyber-thriller that I think fans of David Ignatius's "The Quantum Spy" would enjoy. This fast-paced techno-thriller brilliantly combines cutting-edge quantum computing with elementals of espionage and corporate intrigue. It also explores international relations issues as the main characters pitch their quantum computing tech to Russia, China, and North Korea. Well-researched and a great ride overall.</div>
+      <div class="source"><a href="https://www.amazon.com/gp/customer-reviews/R3G1H5QHF643LH/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8" target="_blank" rel="noopener noreferrer">View this review on Amazon</a></div>
+    </article>
+
+  </main>
+
+  <footer><p>&copy; 2025 Gregory Peter Le Sage</p></footer>
+
+  <script>
+    const reviews = Array.from(document.querySelectorAll('.review'));
+    let i = 0;
+    function render(){
+      reviews.forEach((el, idx) => el.hidden = idx !== i);
+      document.getElementById('counter').textContent = (i+1) + ' / ' + reviews.length;
+    }
+    function prev(){ i = (i - 1 + reviews.length) % reviews.length; render(); }
+    function next(){ i = (i + 1) % reviews.length; render(); }
+    document.getElementById('prevBtn').onclick = prev;
+    document.getElementById('nextBtn').onclick = next;
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    });
+    render();
+  </script>
+</body>
+</html>
