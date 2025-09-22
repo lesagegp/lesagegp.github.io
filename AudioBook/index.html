@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Audiobook – Quantum Eschaton</title>
+  <meta name="description" content="Listen to and download the free audiobook for Quantum Eschaton by Gregory Peter Le Sage.">
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --fg:#eaeaea;
+      --accent:#ffd54f;
+      --muted:#bdbdbd;
+      --card:#151518;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+    .wrap{max-width:900px;margin:0 auto;padding:2rem 1rem 3rem}
+    header{margin-bottom:1.25rem}
+    h1{margin:0 0 .25rem;font-size:clamp(1.6rem,2.2vw,2.2rem)}
+    p{margin:.25rem 0}
+    .card{background:var(--card);border:1px solid #222;border-radius:14px;padding:1rem 1rem 1.25rem}
+    .player{margin-top:.5rem}
+    audio{width:100%;outline:none;border-radius:8px}
+    .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:.8rem 1.1rem;border-radius:12px;border:1px solid #39393f;
+      background:linear-gradient(180deg,#2a2a2f,#1f1f24); color:var(--fg);
+      font-weight:600;text-decoration:none;cursor:pointer;transition:transform .06s ease,filter .15s ease;
+    }
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.1)}
+    .btn.accent{background:linear-gradient(180deg,#ffe082,#ffca28);color:#111;border-color:#d1a500}
+    .note{color:var(--muted);font-size:.95rem;margin-top:.75rem}
+    footer{margin-top:2rem;color:var(--muted);font-size:.9rem}
+    code{background:#1e1e23;border:1px solid #2a2a31;padding:.15rem .35rem;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Free Audiobook: <em>Quantum Eschaton</em></h1>
+      <p>Stream right here or download the full MP3 to keep.</p>
+    </header>
+
+    <section class="card">
+      <div class="player">
+        <audio controls preload="metadata" src="https://web.stanford.edu/~lesagegp/AudioBook/QE_Small.mp3">
+          Your browser doesn’t support the audio element.
+        </audio>
+      </div>
+      <div class="actions">
+        <a class="btn accent" href="https://web.stanford.edu/~lesagegp/AudioBook/QE_Small.mp3" download="Quantum_Eschaton_Complete.mp3" rel="noopener">⬇️ Download MP3</a>
+        <a class="btn" href="https://web.stanford.edu/~lesagegp/AudioBook/QE_Small.mp3" target="_blank" rel="noopener">▶️ Open in New Tab</a>
+      </div>
+      <p class="note">Tip: If the stream stutters on a slow connection, use <strong>Download MP3</strong> and listen offline. For very large files, right-click the button and choose <em>Save link as…</em></p>
+    </section>
+
+    <footer>
+      <p>  </p>
+    </footer>
+  </div>
+</body>
+</html>
