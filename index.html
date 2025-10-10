@@ -42,10 +42,37 @@
   .signup button { background: #222; color: #fff; padding: 0.6rem 1.2rem; border: none; border-radius: 6px; cursor: pointer; }
   .signup button:hover { opacity: 0.9; }
   .success-message { display: none; border: 1px solid #cfe6cf; background: #f4fbf4; border-radius: 10px; padding: 1rem; margin-top: 1rem; }
+
+  /* ===== Glowing Audiobook Banner ===== */
+  .pulse-banner {
+    background: linear-gradient(90deg, #e60026, #0047ff);
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0.6rem;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 12px rgba(255, 0, 0, 0.6); }
+    50% { box-shadow: 0 0 24px rgba(0, 71, 255, 0.8); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pulse-banner { animation: none; }
+  }
 </style>
 </head>
 
 <body>
+
+<!-- ===== Pulsing Top Banner ===== -->
+<a href="#signup" class="pulse-banner" aria-label="Get your free audiobook">
+  🎧 FREE AUDIOBOOK – Get it Now
+</a>
+
 <header>
   <h1>Gregory Le Sage Books</h1>
   <nav>
