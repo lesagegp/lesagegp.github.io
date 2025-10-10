@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://greglesagebooks.myvnc.com/sitemap.xml
+Sitemap: https://lesageauthor.com/sitemap.xml
