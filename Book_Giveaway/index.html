@@ -3,99 +3,262 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Free Quantum Eschaton Audiobook</title>
+<title>Free Audiobook — Quantum Eschaton by Gregory Peter Le Sage</title>
+<link rel="canonical" href="https://lesageauthor.com/Book_Giveaway/"/>
+
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #000;
-    color: #fff;
-    margin: 0;
-    padding: 3rem 1rem;
+  /* --- Base / Theme --- */
+  :root{
+    --bg: #f7f9fc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --accent: #1e40af;   /* calm blue */
+    --accent-2: #0ea5e9; /* soft cyan for hover */
+    --border: #e2e8f0;
   }
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 56px;
   }
-  form {
-    background: #111;
-    display: inline-block;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255,255,255,0.15);
+
+  /* --- Top brand bar --- */
+  .brandbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
   }
-  input[type="email"] {
-    font-size: 1rem;
-    padding: 0.6rem;
-    border: none;
-    border-radius: 6px;
-    width: 80%;
-    margin-bottom: 1rem;
-  }
-  button {
-    background: #ff3333;
-    color: white;
-    font-size: 1.1rem;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  button:hover {
-    background: #ff5555;
-  }
-  .promise {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #aaa;
-  }
-  .success-message {
-    margin-top: 2rem;
-  }
-  a {
-    color: #00aaff;
+  .brandbar a {
+    color: var(--accent);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
   }
+  .brandbar a:hover { color: var(--accent-2); }
+
+  /* --- Card layout --- */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    box-shadow: 0 8px 28px rgba(15,23,42,0.06);
+  }
+  @media (max-width: 820px) {
+    .card { grid-template-columns: 1fr; }
+  }
+
+  /* --- Book cover --- */
+  .cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+  }
+  .cover img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 24px rgba(2,6,23,0.08);
+  }
+
+  /* --- Content --- */
+  h1 {
+    font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+    line-height: 1.2;
+    margin: 0 0 8px 0;
+  }
+  .byline {
+    color: var(--muted);
+    margin: 0 0 14px 0;
+    font-size: 0.98rem;
+  }
+  .intro {
+    margin: 0 0 18px 0;
+    font-size: 1.05rem;
+  }
+
+  /* --- Form --- */
+  form {
+    margin-top: 8px;
+    display: grid;
+    gap: 10px;
+  }
+  label {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  input[type="email"]{
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  button{
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    background: var(--accent);
+    color: white;
+  }
+  button:hover { background: var(--accent-2); }
+
+  .trust {
+    margin-top: 8px;
+    font-size: 0.92rem;
+    color: var(--muted);
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    text-align: left;
+  }
+  .trust .lock { font-size: 1.05rem; line-height: 1.1; }
+
+  /* --- Success state --- */
+  .success {
+    margin-top: 14px;
+    padding: 14px;
+    border: 1px solid #c7f9cc;
+    background: #effdf2;
+    border-radius: 10px;
+    display: none;
+  }
+  .success a { color: var(--accent); font-weight: 700; text-decoration: none; }
+  .success a:hover { color: var(--accent-2); }
+
+  /* --- Footer --- */
+  footer {
+    margin-top: 22px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .ext-links {
+    margin-top: 8px;
+  }
+  .ext-links a{
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .ext-links a:hover { color: var(--accent-2); }
 </style>
 </head>
 <body>
+  <div class="wrap">
+    <!-- Brand continuity -->
+    <div class="brandbar">
+      <div>From <strong>Gregory Peter Le Sage</strong></div>
+      <div><a href="/" rel="noopener">← Back to lesageauthor.com</a></div>
+    </div>
 
-<h1>Get the Free <em>Quantum Eschaton</em> Audiobook</h1>
-<p>Enter your email below to receive the download page instantly.</p>
+    <div class="card">
+      <!-- Book cover -->
+      <div class="cover">
+        <img src="../Quantum Eschaton_Cover.jpg" alt="Cover of Quantum Eschaton by Gregory Peter Le Sage"/>
+      </div>
 
-<form id="signupForm" action="https://formspree.io/f/mblzzdrj" method="POST">
-  <input id="email" type="email" name="email" required placeholder="you@example.com"/><br/>
-  <button type="submit">Send Me the Link</button>
-</form>
+      <!-- Copy + Form -->
+      <div>
+        <h1>Free Full Audiobook: <em>Quantum Eschaton</em></h1>
+        <p class="byline">A science-fiction techno-thriller by Gregory Peter Le Sage</p>
 
-<p class="promise">I will not spam. I will only send a short message when my third book comes out — and nothing else.</p>
+        <p class="intro">
+          I’m giving new listeners the full, professionally produced audiobook — free.
+          Enter your email and I’ll send the download page right away.
+        </p>
 
-<div id="successMessage" class="success-message" style="display:none;">
-  <h2>Thank you!</h2>
-  <p>Here’s your audiobook page:</p>
-  <a href="https://lesageauthor.com/AudioBook" target="_blank" rel="noopener noreferrer">lesageauthor.com/AudioBook</a>
-</div>
+        <form id="signupForm" action="https://formspree.io/f/mblzzdrj" method="POST" aria-label="Free audiobook signup">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="email" inputmode="email"/>
+
+          <!-- Optional: tiny honeypot to deter bots -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
+
+          <button type="submit" aria-label="Email me the audiobook link">Email me the link</button>
+
+          <div class="trust">
+            <div class="lock" aria-hidden="true">🔒</div>
+            <div>
+              I will not spam or share your address. You’ll receive the audiobook link now,
+              and a single brief note when my next book releases — nothing else.
+            </div>
+          </div>
+
+          <!-- Where Formspree can redirect on success (optional) -->
+          <!-- <input type="hidden" name="_redirect" value="https://lesageauthor.com/Book_Giveaway/?thankyou=1"/> -->
+        </form>
+
+        <div id="successMessage" class="success" role="status" aria-live="polite">
+          <strong>Thank you!</strong>
+          <div>Here’s your audiobook page:</div>
+          <div><a href="https://lesageauthor.com/AudioBook" target="_blank" rel="noopener noreferrer">lesageauthor.com/AudioBook</a></div>
+        </div>
+
+        <noscript>
+          <p class="trust" style="margin-top:12px;">
+            JavaScript is disabled — you can also <a href="mailto:lesagegp@gmail.com?subject=Free%20Quantum%20Eschaton%20Audiobook">email me</a> and I’ll send the link manually.
+          </p>
+        </noscript>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Gregory Peter Le Sage
+      <div class="ext-links">
+        <a href="https://www.amazon.com/stores/Gregory-Le-Sage/author/B0DJYJL2F1" target="_blank" rel="noopener">Amazon Author</a>
+        <a href="/" rel="noopener">Website</a>
+        <a href="mailto:lesagegp@gmail.com">Contact</a>
+      </div>
+    </footer>
+  </div>
 
 <script>
-  const form = document.getElementById('signupForm');
-  const successMessage = document.getElementById('successMessage');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const response = await fetch(form.action, { method: form.method, body: data, headers: { 'Accept': 'application/json' }});
-    if (response.ok) {
-      form.style.display = 'none';
-      successMessage.style.display = 'block';
-    } else {
-      alert('Something went wrong. Please try again.');
-    }
-  });
-</script>
+  // Progressive enhancement: inline submit -> success panel.
+  (function(){
+    const form = document.getElementById('signupForm');
+    const success = document.getElementById('successMessage');
+    if(!form) return;
 
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      } catch {
+        alert('Network error. Please try again.');
+      }
+    }, { passive: false });
+  })();
+</script>
 </body>
 </html>
