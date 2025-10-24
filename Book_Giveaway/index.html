@@ -87,8 +87,13 @@
     font-size: 0.98rem;
   }
   .intro {
-    margin: 0 0 18px 0;
+    margin: 0 0 12px 0;
     font-size: 1.05rem;
+  }
+  .promo {
+    margin: 0 0 16px 0;
+    font-size: 0.98rem;
+    color: var(--muted);
   }
 
   /* --- Form --- */
@@ -121,6 +126,36 @@
     color: white;
   }
   button:hover { background: var(--accent-2); }
+
+  /* --- Extra actions (links styled as buttons) --- */
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 12px 0 4px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .btn.primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .btn.primary:hover { background: var(--accent-2); }
+  .btn.secondary {
+    background: #fff;
+    color: var(--text);
+    font-weight: 600;
+  }
+  .btn.secondary:hover { background: #f1f5f9; }
 
   .trust {
     margin-top: 8px;
@@ -168,13 +203,15 @@
     <!-- Brand continuity -->
     <div class="brandbar">
       <div>From <strong>Gregory Peter Le Sage</strong></div>
-      <div><a href="/" rel="noopener">← Back to lesageauthor.com</a></div>
+      <!-- Absolute URL so it always goes to your site -->
+      <div><a href="https://lesageauthor.com" rel="noopener">← Back to lesageauthor.com</a></div>
     </div>
 
     <div class="card">
       <!-- Book cover -->
       <div class="cover">
-        <img src="../Quantum Eschaton_Cover.jpg" alt="Cover of Quantum Eschaton by Gregory Peter Le Sage"/>
+        <!-- Image is in the same directory; underscore version -->
+        <img src="..\Quantum_Eschaton_Cover.jpg" alt="Cover of Quantum Eschaton by Gregory Peter Le Sage"/>
       </div>
 
       <!-- Copy + Form -->
@@ -183,9 +220,20 @@
         <p class="byline">A science-fiction techno-thriller by Gregory Peter Le Sage</p>
 
         <p class="intro">
-          I’m giving new listeners the full, professionally produced audiobook — free.
-          Enter your email and I’ll send the download page right away.
+          I’m giving new listeners the full audiobook — free. Enter your email and I’ll send the download page right away.
         </p>
+
+        <!-- Friendly promo / advertisement line -->
+        <p class="promo">
+          <strong>Runtime:</strong> 3 hours, 9 minutes, 8 seconds. <strong>Production:</strong> professionally produced for clear, immersive listening.
+        </p>
+
+        <!-- Chapter 1 free listen button (no signup) -->
+        <div class="actions" aria-label="Preview options">
+          <a class="btn secondary" href="https://web.stanford.edu/~lesagegp/AudioBook/QE_Chapter_1.mp3" target="_blank" rel="noopener">
+            🎧 Listen to Chapter 1 (Free)
+          </a>
+        </div>
 
         <form id="signupForm" action="https://formspree.io/f/mblzzdrj" method="POST" aria-label="Free audiobook signup">
           <label for="email">Email address</label>
@@ -226,7 +274,7 @@
       © 2025 Gregory Peter Le Sage
       <div class="ext-links">
         <a href="https://www.amazon.com/stores/Gregory-Le-Sage/author/B0DJYJL2F1" target="_blank" rel="noopener">Amazon Author</a>
-        <a href="/" rel="noopener">Website</a>
+        <a href="https://lesageauthor.com" rel="noopener">Website</a>
         <a href="mailto:lesagegp@gmail.com">Contact</a>
       </div>
     </footer>
@@ -261,5 +309,4 @@
   })();
 </script>
 </body>
-
 </html>
