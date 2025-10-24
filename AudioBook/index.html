@@ -1,63 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Free Audiobook – Quantum Eschaton</title>
-  <meta name="description" content="Listen to and download the free audiobook for Quantum Eschaton by Gregory Peter Le Sage.">
-  <style>
-    :root{
-      --bg:#0b0b0c;
-      --fg:#eaeaea;
-      --accent:#ffd54f;
-      --muted:#bdbdbd;
-      --card:#151518;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
-    .wrap{max-width:900px;margin:0 auto;padding:2rem 1rem 3rem}
-    header{margin-bottom:1.25rem}
-    h1{margin:0 0 .25rem;font-size:clamp(1.6rem,2.2vw,2.2rem)}
-    p{margin:.25rem 0}
-    .card{background:var(--card);border:1px solid #222;border-radius:14px;padding:1rem 1rem 1.25rem}
-    .player{margin-top:.5rem}
-    audio{width:100%;outline:none;border-radius:8px}
-    .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:.8rem 1.1rem;border-radius:12px;border:1px solid #39393f;
-      background:linear-gradient(180deg,#2a2a2f,#1f1f24); color:var(--fg);
-      font-weight:600;text-decoration:none;cursor:pointer;transition:transform .06s ease,filter .15s ease;
-    }
-    .btn:hover{transform:translateY(-1px);filter:brightness(1.1)}
-    .btn.accent{background:linear-gradient(180deg,#ffe082,#ffca28);color:#111;border-color:#d1a500}
-    .note{color:var(--muted);font-size:.95rem;margin-top:.75rem}
-    footer{margin-top:2rem;color:var(--muted);font-size:.9rem}
-    code{background:#1e1e23;border:1px solid #2a2a31;padding:.15rem .35rem;border-radius:6px}
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Free Audiobook — Quantum Eschaton</title>
+
+<style>
+  /* --- Base / Theme --- */
+  :root{
+    --bg: #f7f9fc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --accent: #1e40af;   /* calm blue */
+    --accent-2: #0ea5e9; /* soft cyan for hover */
+    --border: #e2e8f0;
+  }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.5;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 56px;
+  }
+
+  /* --- Top brand bar --- */
+  .brandbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
+    font-size: 0.98rem;
+  }
+  .brandbar a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .brandbar a:hover { color: var(--accent-2); }
+
+  /* --- Card layout --- */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    box-shadow: 0 8px 28px rgba(15,23,42,0.06);
+  }
+  @media (max-width: 820px) {
+    .card { grid-template-columns: 1fr; }
+  }
+
+  /* --- Book cover --- */
+  .cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+  }
+  .cover img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 24px rgba(2,6,23,0.08);
+  }
+
+  /* --- Content --- */
+  h1 {
+    font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+    line-height: 1.2;
+    margin: 0 0 8px 0;
+  }
+  .byline {
+    color: var(--muted);
+    margin: 0 0 14px 0;
+    font-size: 0.98rem;
+  }
+  .intro {
+    margin: 0 0 16px 0;
+    font-size: 1.05rem;
+  }
+
+  /* --- Audio player --- */
+  .player { margin-top: 8px; }
+  audio { width: 100%; outline: none; border-radius: 10px; }
+
+  /* --- Actions --- */
+  .actions {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px;
+  }
+  .btn{
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 12px 16px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; cursor: pointer;
+    transition: transform .06s ease, filter .15s ease, background .2s ease;
+  }
+  .btn:hover{ transform: translateY(-1px); background: var(--accent-2); }
+  .btn.secondary{
+    background: #fff; color: var(--text); font-weight: 600;
+  }
+  .btn.secondary:hover{ background: #f1f5f9; }
+
+  .note{
+    color: var(--muted); font-size: .95rem; margin-top: 10px;
+  }
+
+  /* --- Footer --- */
+  footer {
+    margin-top: 22px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .ext-links { margin-top: 8px; }
+  .ext-links a{
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .ext-links a:hover { color: var(--accent-2); }
+</style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <h1>Free Audiobook: <em>Quantum Eschaton</em></h1>
-      <p>Stream right here or download the full MP3 to keep.</p>
-    </header>
+    <!-- Brand continuity -->
+    <div class="brandbar">
+      <div>From <strong>Gregory Peter Le Sage</strong></div>
+      <div><a href="https://lesageauthor.com" rel="noopener">← Back to lesageauthor.com</a></div>
 
-    <section class="card">
-      <div class="player">
-        <audio controls preload="metadata" src="https://web.stanford.edu/~lesagegp/AudioBook/QE_Small.mp3">
-          Your browser doesn’t support the audio element.
-        </audio>
+    </div>
+
+    <div class="card">
+      <!-- Book cover -->
+      <div class="cover">
+        <!-- Adjust the path if needed -->
+        <img src="Quantum_Eschaton_Cover.jpg" alt="Cover of Quantum Eschaton by Gregory Peter Le Sage"/>
       </div>
-      <div class="actions">
-        <a class="btn accent" href="https://web.stanford.edu/~lesagegp/AudioBook/QE_Small.mp3" download="Quantum_Eschaton_Complete.mp3" rel="noopener">⬇️ Download MP3</a>
-        <a class="btn" href="https://web.stanford.edu/~lesagegp/AudioBook/QE_Small.mp3" target="_blank" rel="noopener">▶️ Open in New Tab</a>
+
+      <!-- Copy + Player + Buttons -->
+      <div>
+        <h1>Free Full Audiobook: <em>Quantum Eschaton</em></h1>
+        <p class="byline">A science-fiction techno-thriller by Gregory Peter Le Sage</p>
+
+        <p class="intro">
+          Thanks for stopping by! You can stream the audiobook here, or download a ZIP to listen offline anytime.
+          No sign-ups, no tricks—just enjoy the story.
+        </p>
+
+        <div class="player">
+          <!-- Keep this path the same as your current file location -->
+          <audio controls preload="metadata" src="QE_Small.mp3">
+            Your browser doesn’t support the audio element.
+          </audio>
+        </div>
+
+        <div class="actions">
+          <!-- ZIP download -->
+          <a class="btn" href="Quantum_Eschaton_Complete.zip" download rel="noopener">⬇️ Download MP3 Zip</a>
+
+          <!-- Open stream in a new tab -->
+          <a class="btn secondary" href="QE_Small.mp3" target="_blank" rel="noopener">▶️ Open Player in New Tab</a>
+        </div>
+
+        <p class="note">
+          Tip: If streaming hiccups on a slow connection, use <strong>Download MP3 Zip</strong> and listen offline.
+        </p>
       </div>
-      <p class="note">Tip: If the stream stutters on a slow connection, use <strong>Download MP3</strong> and listen offline. For very large files, right-click the button and choose <em>Save link as…</em></p>
-    </section>
+    </div>
 
     <footer>
-      <p>  </p>
+      © 2025 Gregory Peter Le Sage
+      <div class="ext-links">
+        <a href="https://www.amazon.com/stores/Gregory-Le-Sage/author/B0DJYJL2F1" target="_blank" rel="noopener">Amazon Author</a>
+        <a href="/" rel="noopener">Website</a>
+        <a href="mailto:lesagegp@gmail.com">Contact</a>
+      </div>
     </footer>
   </div>
 </body>
