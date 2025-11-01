@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lesageauthor.com/</loc>
+    <lastmod>2025-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://lesageauthor.com/Book_Giveaway/</loc>
+    <lastmod>2025-11-01</lastmod>
+  </url>
+  <url>
     <loc>https://lesageauthor.com/AudioBook/</loc>
+    <lastmod>2025-11-01</lastmod>
   </url>
   <url>
-    <loc>https://lesageauthor.com/QE%20Reviews.html</loc>
+    <loc>https://lesageauthor.com/QE_Reviews.html</loc>
+    <lastmod>2025-11-01</lastmod>
   </url>
   <url>
-    <loc>https://lesageauthor.com/CO%20Reviews.html</loc>
+    <loc>https://lesageauthor.com/CO_Reviews.html</loc>
+    <lastmod>2025-11-01</lastmod>
   </url>
 </urlset>
+
